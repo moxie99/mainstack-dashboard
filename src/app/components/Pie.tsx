@@ -26,7 +26,7 @@ const PieChart = () => {
 
   return (
     <Chart
-      width={"700px"}
+      width={"500px"}
       height={"300px"}
       chartType="PieChart"
       loader={<div>Loading Chart</div>}

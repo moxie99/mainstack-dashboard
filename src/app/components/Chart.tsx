@@ -126,12 +126,19 @@ const LineChart = () => {
       data={formattedData}
       options={{
         title: "Value by Date",
-        hAxis: {
+       hAxis: {
           title: "Date",
           titleTextStyle: { color: "#333" },
         },
         vAxis: {
           minValue: 0,
+        },
+        colors: ["#FF5403"],
+        series: {
+          0: {
+            areaOpacity: 0.3,
+            areaColor: "#FF540333",
+          },
         },
       }}
     />

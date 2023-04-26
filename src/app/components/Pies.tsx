@@ -111,7 +111,7 @@ const Pie = () => {
       loader={<div>Loading Chart</div>}
       data={[
         ["Country", "Count"],
-        ...data.map(({ source, count }) => [country, count]),
+        ...data.map(({ source, count }) => [source, count]),
       ]}
       options={options}
     />
