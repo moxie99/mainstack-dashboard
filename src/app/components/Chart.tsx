@@ -114,7 +114,7 @@ const formatDate = (dateString: any) => {
 const LineChart = () => {
   const formattedData = [["Date", "Value"]];
   for (const [date, value] of Object.entries(data)) {
-    formattedData.push([formatDate(date), value]);
+    formattedData.push([formatDate(date), value.toString()]);
   }
 
   return (
