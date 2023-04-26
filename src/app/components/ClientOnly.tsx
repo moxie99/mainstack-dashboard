@@ -14,7 +14,7 @@ const ClientOnly: React.FC<ClientOnlyProps> = ({ children }) => {
 
   if (!hasMounted) {
     return null;
-  }i 
+  }
   return <>{children}</>;
 };
 
