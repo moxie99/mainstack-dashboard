@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div className="flex flex-col mt-[20px]">
       <div>
-        <h2 >Dashboard</h2>
+        <h2 className="text-[#131316] text-xl mb-[46px]">Dashboard</h2>
       </div>
 
       <div>
@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="hidden md:flex md:flex-row lg: flex-row gap-2 items-center">
         {daysList.map(({ text, id }) => (
           <div
-            className={`px-3 py-2 border-solid rounded-full ${
+            className={`px-3 py-2 border-solid rounded-full cursor-pointer ${
               id === "5"
                 ? "bg-[#FFEEE5] border-[#FF5403] border"
                 : "bg-transparent border-slate-300 border"  
@@ -57,10 +57,6 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-
-      <h5>500</h5>
-
-      <h5></h5>
     </div>
   );
 };

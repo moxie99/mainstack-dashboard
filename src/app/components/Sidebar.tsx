@@ -68,7 +68,7 @@ const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
     <div className="flex">
       <div className="fixed h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between lg:w-[10vw] md:w-[15vw]">
         <div className="flex flex-col items-center">
-          <div className="mt-[23px] mb-[49px]">
+          <div className="mt-[10px] mb-[10px]">
             <Image
               src={"/images/placeholder.png"}
               priority={true}
@@ -82,7 +82,7 @@ const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
             {sidebarItems.map(({ text, icon }) => {
               if (!icon) {
                 return (
-                  <h3 key={text} className="mt-[32px] mr-[0] mb-[20px]">
+                  <h3 key={text} className="mt-[10px] mr-[0] mb-[10px]">
                     {text}
                   </h3>
                 );
@@ -93,7 +93,7 @@ const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
               return <SidebarItem key={text} text={text} icon={icon} />;
             })}
           </div>
-          <div className="flex items-center justify-between gap-1 lg:mt-[100px] md:mt-[8rem] mt-[1rem]">
+          <div className="flex items-center justify-between gap-1 lg:mt-[20px] md:mt-[10px] mt-[1rem]">
             <div>
               <Image
                 src={"/images/image.png"}
@@ -111,38 +111,10 @@ const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
           </div>
         </div>
       </div>
-      <main className="w-full lg:ml-52 md:ml-40">{children}</main>
+      <main className="w-full lg:ml-64 md:ml-40">{children}</main>
     </div>
   );
 };
 
 export default Sidebar;
 
-{
-  /* <Link href="/">
-            <div className="inline-block p-3 text-white bg-purple-800 rounded-lg">
-              <RxSketchLogo size={20} />
-            </div>
-          </Link>
-          <span className="border-b-[1px] border-gray-200 w-full p-2"></span>
-          <Link href="/">
-            <div className="inline-block p-3 my-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-gray-200">
-              <RxDashboard size={20} />
-            </div>
-          </Link>
-          <Link href="/customers">
-            <div className="inline-block p-3 my-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-gray-200">
-              <RxPerson size={20} />
-            </div>
-          </Link>
-          <Link href="/orders">
-            <div className="inline-block p-3 my-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-gray-200">
-              <HiOutlineShoppingBag size={20} />
-            </div>
-          </Link>
-          <Link href="/">
-            <div className="inline-block p-3 my-4 bg-gray-100 rounded-lg cursor-pointer hover:bg-gray-200">
-              <FiSettings size={20} />
-            </div>
-          </Link> */
-}

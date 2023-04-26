@@ -104,7 +104,7 @@ const data = {
   "2022-08-09": 2,
 };
 
-const formatDate = (dateString) => {
+const formatDate = (dateString: any) => {
   const date = new Date(dateString);
   const month = date.toLocaleString("default", { month: "short" });
   const day = date.getDate();
