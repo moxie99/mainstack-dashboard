@@ -111,7 +111,7 @@ const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
           </div>
         </div>
       </div>
-      <main className="w-full ml-40">{children}</main>
+      <main className="w-full lg:ml-52 md:ml-40">{children}</main>
     </div>
   );
 };
