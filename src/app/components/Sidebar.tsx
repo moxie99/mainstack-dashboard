@@ -66,18 +66,18 @@ const sidebarItems = [
 const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
   return (
     <div className="flex">
-      <div className="fixed h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between lg:w-[10vw] md:w-[15vw]">
+      <div className="fixed h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between lg:w-[12vw] md:w-[12vw]">
+        <div className="mt-[10px] mb-[10px]">
+          <Image
+            src={"/images/placeholder.png"}
+            priority={true}
+            alt="avatar"
+            height="40"
+            width="40"
+            className="rounded-full"
+          />
+        </div>
         <div className="flex flex-col items-center">
-          <div className="mt-[10px] mb-[10px]">
-            <Image
-              src={"/images/placeholder.png"}
-              priority={true}
-              alt="avatar"
-              height="40"
-              width="40"
-              className="rounded-full"
-            />
-          </div>
           <div>
             {sidebarItems.map(({ text, icon }) => {
               if (!icon) {
@@ -88,30 +88,30 @@ const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
                 );
               }
 
-              const lctext = text.toLowerCase().replace(/\s+/g, "");
+              // const lctext = text.toLowerCase().replace(/\s+/g, "");
 
               return <SidebarItem key={text} text={text} icon={icon} />;
             })}
           </div>
-          <div className="flex items-center justify-between gap-1 lg:mt-[20px] md:mt-[10px] mt-[1rem]">
-            <div>
-              <Image
-                src={"/images/image.png"}
-                priority={true}
-                alt="avatar"
-                height="30"
-                width="30"
-                className="rounded-full"
-              />
-            </div>
-            <h3 className="text-base">Blessing Daniels</h3>
-            <div>
-              <BsThreeDots size={26} />
-            </div>
+        </div>
+        <div className="flex items-center justify-between gap-1 lg:mt-[20px] md:mt-[10px] mt-[1rem]">
+          <div>
+            <Image
+              src={"/images/image.png"}
+              priority={true}
+              alt="avatar"
+              height="30"
+              width="30"
+              className="rounded-full"
+            />
+          </div>
+          <h3 className="text-base">Blessing Daniels</h3>
+          <div>
+            <BsThreeDots size={26} />
           </div>
         </div>
       </div>
-      <main className="w-full lg:ml-64 md:ml-40">{children}</main>
+      <main className="w-full lg:ml-[13vw] md:ml-[13vw]">{children}</main>
     </div>
   );
 };

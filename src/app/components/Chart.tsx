@@ -23,7 +23,7 @@ const formatDate = (dateString: any) => {
 };
 
 const LineChart = () => {
-  const formattedData = [["Date", "Value"]];
+  const formattedData = [["Date", "0"]];
   for (const [date, value] of Object.entries(data)) {
     formattedData.push([formatDate(date), Number(value)]);
   }
@@ -69,6 +69,12 @@ const LineChart = () => {
                   areaOpacity: 0.3,
                   areaColor: "#FF540333",
                 },
+                animation: {
+                  startup: true,
+                  easing: "linear",
+                  duration: 1500,
+                },
+                legend: { position: "none" },
               },
             }}
           />

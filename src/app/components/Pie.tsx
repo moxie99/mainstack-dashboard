@@ -24,17 +24,19 @@ const PieChart = () => {
   };
 
   return (
-    <div className="px-10 py-10 border-[#EFF1F6] border rounded-md">
-      <Chart
-        chartType="PieChart"
-        loader={<div>Loading Chart</div>}
-        data={[
-          ["Country", "Count"],
-          ...data.map(({ country, count }) => [country, count]),
-        ]}
-        options={options}
-      />
-      {/* <h5 className="text-[#FF5403] text-base">View full reports</h5> */}
+    <div className="flex flex-row justify-between px-10 py-10 border-[#EFF1F6] border rounded-md w-[30vw]  mr-10">
+      <div>
+        <Chart
+          chartType="PieChart"
+          loader={<div>Loading Chart</div>}
+          data={[
+            ["Country", "Count"],
+            ...data.map(({ country, count }) => [country, count]),
+          ]}
+          options={options}
+        />
+      </div>
+      <h5 className="text-[#FF5403] text-sm font-light">View full reports</h5>
     </div>
   );
 };

@@ -41,7 +41,7 @@ const Pie = () => {
   };
 
   return (
-    <div className="px-10 py-10 border-[#EFF1F6] border rounded-md">
+    <div className="flex flex-row justify-between px-10 py-10 border-[#EFF1F6] border rounded-md w-[30vw] mr-10">
       <Chart
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
@@ -51,6 +51,7 @@ const Pie = () => {
         ]}
         options={options}
       />
+      <h5 className="text-[#FF5403] text-sm font-light">View full reports</h5>
     </div>
   );
 };
