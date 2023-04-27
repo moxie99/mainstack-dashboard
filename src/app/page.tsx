@@ -7,7 +7,9 @@ import Loading from "./loading";
 import ClientOnly from "./components/ClientOnly";
 import Container from "./components/Container";
 import Chart from "./components/Chart";
-import Pie from "./components/Pie";import Pies from "./components/Pies";
+import Pie from "./components/Pie";
+import Pies from "./components/Pies";
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +39,7 @@ export default function Home() {
   return (
     <ClientOnly>
       <Container>
+        <Navbar />
         <Chart data={chartData} />
         <div className="grid grid-cols-1 gap-8 pt-24 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
           <Pie />

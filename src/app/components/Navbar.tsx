@@ -29,9 +29,9 @@ const daysList = [
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col mt-[20px]">
+    <div className="flex flex-col mt-[20px] md:mb-[30px] lg:mb-[30px]">
       <div>
-        <h2 className="text-[#131316] mb-[46px] text-[24px] font-bold">
+        <h2 className="absolute top-12 text-[#131316] mb-[46px] text-[24px] font-bold">
           Dashboard
         </h2>
       </div>

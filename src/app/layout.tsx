@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import { Providers } from "./redux/provider";
 import ClientOnly from "./components/ClientOnly";
 import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <ClientOnly>
-            <Sidebar>
-              <Navbar />
-            </Sidebar>
+            <Sidebar />
           </ClientOnly>
           <div className="pb-20 pt-28">{children}</div>
         </Providers>

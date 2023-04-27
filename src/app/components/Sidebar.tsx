@@ -14,7 +14,7 @@ import { GiAlarmClock } from "react-icons/gi";
 import SidebarItem from "./SidebarItem";
 
 interface SidebarChildrenProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const sidebarItems = [
@@ -63,7 +63,7 @@ const sidebarItems = [
     icon: GiAlarmClock,
   },
 ];
-const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
+const Sidebar: React.FC<SidebarChildrenProps> = () => {
   return (
     <div className="flex">
       <div className="fixed h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between lg:w-[12vw] md:w-[12vw]">
@@ -111,7 +111,7 @@ const Sidebar: React.FC<SidebarChildrenProps> = ({ children }) => {
           </div>
         </div>
       </div>
-      <main className="w-full lg:ml-[13vw] md:ml-[13vw]">{children}</main>
+      {/* <main className="w-full lg:ml-[13vw] md:ml-[13vw]">{children}</main> */}
     </div>
   );
 };
