@@ -14,7 +14,18 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const { isLoading, isFetching, data, error } = useGetDashboardDataQuery(null);
 
-  console.log("customedata", data);
+  const chartData = {
+    "2022-07-31": 1,
+    "2022-08-01": 3,
+    "2022-08-02": 3,
+    "2022-08-03": 7,
+    "2022-08-04": 8,
+    "2022-08-05": 5,
+    "2022-08-06": 20,
+    "2022-08-07": 50,
+    "2022-08-08": 100,
+    "2022-08-09": 2,
+  };
 
   if (error) {
     <ErrorState />;
@@ -26,12 +37,11 @@ export default function Home() {
   return (
     <ClientOnly>
       <Container>
-        <Chart/>
-        <div className="grid grid-cols-1 gap-8 pt-24 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 lg:ml-64 md:ml-40">
-          <Pie/>
-
-          <Pies/>
-        </div> 
+        <Chart data={chartData} />
+        <div className="grid grid-cols-1 gap-8 pt-24 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
+          <Pie />
+          <Pies />
+        </div>
       </Container>
     </ClientOnly>
   );
