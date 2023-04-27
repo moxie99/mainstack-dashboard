@@ -38,42 +38,46 @@ const LineChart = () => {
   };
 
   return (
-    <>
+    <div className="ml-40">
+      <div className="px-10 py-10 border-[#EFF1F6] border rounded-md">
       <div>
-        <h1 className="text-base font-semibold text-[#131316]">Page Views</h1>
+        <h1 className="text-base font-semibold text-[#131316] mb-[8px]">
+          Page Views
+        </h1>
 
         <h4 className="text-sm font-light text-[#31373D]">All time</h4>
 
-        <h1 className="text-lg font-bold text-[#131316]">500</h1>
+        <h1 className="text-[48px] font-bold text-[#131316] mt-[24px] mb-[10px]">500</h1>
       </div>
 
-      <div className="px-10 py-10 border-[#EFF1F6] border rounded-md border-slate-500">
-      <Chart
-        style={chartStyle}
-        height={"300px"}
-        chartType="LineChart"
-        loader={<div>Loading Chart</div>}
-        data={formattedData}
-        options={{
-          title: "Value by Date",
-          hAxis: {
-            title: "Date",
-            titleTextStyle: { color: "#333" },
-          },
-          vAxis: {
-            minValue: 0,
-          },
-          colors: ["var(--chart-area-color)"],
-          series: {
-            0: {
-              areaOpacity: "var(--chart-area-color-opacity)",
-              areaColor: "var(--chart-area-color)",
+      <div >
+        <Chart
+          style={chartStyle}
+          height={"300px"}
+          chartType="LineChart"
+          loader={<div>Loading Chart</div>}
+          data={formattedData}
+          options={{
+            title: "Value by Date",
+            hAxis: {
+              title: "Date",
+              titleTextStyle: { color: "#333" },
             },
-          },
-        }}
-      />
+            vAxis: {
+              minValue: 0,
+            },
+            colors: ["#FF5403"],
+            series: {
+              0: {
+                areaOpacity: 0.3,
+                areaColor: "#FF540333",
+              },
+            },
+          }}
+        />
       </div>
-    </>
+      </div>
+    </div>
   );
 };
 

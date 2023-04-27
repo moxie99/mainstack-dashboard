@@ -31,12 +31,16 @@ const Navbar = () => {
   return (
     <div className="flex flex-col mt-[20px]">
       <div>
-        <h2 className="text-[#131316] text-xl mb-[46px]">Dashboard</h2>
+        <h2 className="text-[#131316] mb-[46px] text-[24px] font-bold">
+          Dashboard
+        </h2>
       </div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-[23px]">
         <div>
-          <h2 className="text-[#131316] text-lg">Good morning, Blessing ⛅️</h2>
+          <h2 className="text-[#131316] text-lg font-bold">
+            Good morning, Blessing ⛅️
+          </h2>
           <h5>Check out your dashboard summary.</h5>
         </div>
 

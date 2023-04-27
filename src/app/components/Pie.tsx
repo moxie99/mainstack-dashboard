@@ -24,10 +24,8 @@ const PieChart = () => {
   };
 
   return (
-    <div className="px-10 py-10 border-[#EFF1F6] border rounded-md border-slate-500">
+    <div className="px-10 py-10 border-[#EFF1F6] border rounded-md">
       <Chart
-        // width={"500px"}
-        // height={"300px"}
         chartType="PieChart"
         loader={<div>Loading Chart</div>}
         data={[
@@ -36,6 +34,7 @@ const PieChart = () => {
         ]}
         options={options}
       />
+      {/* <h5 className="text-[#FF5403] text-base">View full reports</h5> */}
     </div>
   );
 };

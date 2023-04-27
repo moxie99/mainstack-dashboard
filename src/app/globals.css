@@ -6,16 +6,5 @@ html,
 body,
 :root {
   height: 100%;
-}
-
-
-:root {
-  --chart-area-color: #FF5403;
-  --chart-area-color-opacity: 0.3;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --chart-area-color: #FFA07A;
-  }
+  /* zoom: 0.75 !important; */
 }
