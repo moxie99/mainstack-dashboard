@@ -1,93 +1,30 @@
-// "use client";
-// import { color } from "d3-color";
-// import { ResponsivePie } from "@nivo/pie";
-
-// const data = [
-//   { country: "Nigeria", count: 68, percent: 34 },
-//   { country: "Germany", count: 37, percent: 19 },
-//   { country: "Ghana", count: 50, percent: 25 },
-//   { country: "Finland", count: 40, percent: 20 },
-//   { country: "United Kingdom", count: 4, percent: 2 },
-// ];
-
-// const Pie = () => (
- 
-//   <div style={{ width: "600px", height: "500px" }}>
-//     <ResponsivePie
-//       data={data.map(({ country, count, percent }) => ({
-//         id: country,
-//         value: count,
-//       }))}
-//       margin={{ top: 40, right: 150, bottom: 80, left: 150 }}
-//       innerRadius={0.5}
-//       padAngle={0.7}
-//       cornerRadius={3}
-//       activeOuterRadiusOffset={8}
-//       borderWidth={1}
-//       borderColor={{ from: "color", modifiers: [["darker", 0.2]] }}
-//       arcLinkLabelsSkipAngle={10}
-//       arcLinkLabelsTextColor="#333333"
-//       arcLinkLabelsThickness={2}
-//       arcLinkLabelsColor={{ from: "color" }}
-//       arcLabelsSkipAngle={10}
-//       arcLabelsTextColor={{ from: "color", modifiers: [["darker", 2]] }}
-//       valueFormat={(value) => `${Number(value)} %`}
-//       legends={[
-//         {
-//           anchor: "bottom",
-//           direction: "row",
-//           justify: false,
-//           translateX: 0,
-//           translateY: 56,
-//           itemsSpacing: 0,
-//           itemWidth: 90,
-//           itemHeight: 18,
-//           itemTextColor: "#999",
-//           itemDirection: "left-to-right",
-//           itemOpacity: 1,
-//           symbolSize: 15,
-//           symbolShape: "circle",
-//           effects: [
-//             {
-//               on: "hover",
-//               style: {
-//                 itemTextColor: "#000",
-//               },
-//             },
-//           ],
-//         },
-//       ]}
-//     />
-//   </div>
-// );
-
-// export default Pie;
-
+"use client";
 
 import Chart from "react-google-charts";
+import ReactCountryFlag from "react-country-flag";
 
 const data = [
-        {
-            "source": "google",
-            "count": 50,
-            "percent": 25
-        },
-        {
-            "source": "instagram",
-            "count": 68,
-            "percent": 34
-        },
-        {
-            "source": "facebook",
-            "count": 40,
-            "percent": 20
-        },
-        {
-            "source": "linkedin",
-            "count": 41,
-            "percent": 21
-        }
-    ]
+  {
+    source: "google",
+    count: 50,
+    percent: 25,
+  },
+  {
+    source: "instagram",
+    count: 68,
+    percent: 34,
+  },
+  {
+    source: "facebook",
+    count: 40,
+    percent: 20,
+  },
+  {
+    source: "linkedin",
+    count: 41,
+    percent: 21,
+  },
+];
 
 const Pie = () => {
   const options = {
@@ -95,18 +32,19 @@ const Pie = () => {
     pieHole: 0.4,
     is3D: true,
     slices: [
-      { color: "#2ecc71" },
-      { color: "#3498db" },
-      { color: "#f1c40f" },
-      { color: "#e74c3c" },
-      { color: "#9b59b6" },
+      { color: "#599EEA" },
+      { color: "#844FF6" },
+      { color: "#0FB77A" },
+      { color: "#FAB70A" },
+      { color: "#F09468" },
     ],
   };
 
   return (
+    <div className="px-10 py-10 border-[#EFF1F6] border rounded-md border-slate-500">
     <Chart
-      width={"500px"}
-      height={"300px"}
+      // width={"500px"}
+      // height={"300px"}
       chartType="PieChart"
       loader={<div>Loading Chart</div>}
       data={[
@@ -115,7 +53,76 @@ const Pie = () => {
       ]}
       options={options}
     />
+    </div>
   );
 };
 
 export default Pie;
+// import Chart from "react-google-charts";
+// import ReactCountryFlag from "react-country-flag";
+// import Image from "next/image";
+
+// const data = [
+//   {
+//     source: "google",
+//     count: 50,
+//     percent: 25,
+//     logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+//   },
+//   {
+//     source: "instagram",
+//     count: 68,
+//     percent: 34,
+//     logo: "https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png",
+//   },
+//   {
+//     source: "facebook",
+//     count: 40,
+//     percent: 20,
+//     logo: "https://www.facebook.com/images/fb_icon_325x325.png",
+//   },
+//   {
+//     source: "linkedin",
+//     count: 41,
+//     percent: 21,
+//     logo: "https://www.linkedin.com/favicon.ico",
+//   },
+// ];
+
+// const Pie = () => {
+//   const options = {
+//     title: "Top Referral source",
+//     pieHole: 0.4,
+//     is3D: true,
+//     slices: [
+//       { color: "#599EEA" },
+//       { color: "#844FF6" },
+//       { color: "#0FB77A" },
+//       { color: "#FAB70A" },
+//       { color: "#F09468" },
+//     ],
+//   };
+
+//   const chartData = [
+//     ["Source", "Count", { role: "style" }, { role: "annotation" }],
+//     ...data.map(({ source, count, logo }) => [
+//       <div key={logo} style={{ display: "flex", alignItems: "center" }}>
+//         <Image src={logo} alt={logo} height={20} width={20} />
+//         <span style={{ marginLeft: "10px" }}>{source}</span>
+//       </div>,
+//       source,
+//       count,
+//     ]),
+//   ];
+
+//   return (
+//     <Chart
+//       chartType="PieChart"
+//       loader={<div>Loading Chart</div>}
+//       data={chartData}
+//       options={options}
+//     />
+//   );
+// };
+
+// export default Pie;

@@ -1,7 +1,6 @@
 "use client";
 
 import Chart from "react-google-charts";
-
 const data = [
   { country: "Nigeria", count: 68, percent: 34 },
   { country: "Germany", count: 37, percent: 19 },
@@ -16,27 +15,30 @@ const PieChart = () => {
     pieHole: 0.4,
     is3D: true,
     slices: [
-      { color: "#2ecc71" },
-      { color: "#3498db" },
-      { color: "#f1c40f" },
-      { color: "#e74c3c" },
-      { color: "#9b59b6" },
+      { color: "#599EEA" },
+      { color: "#844FF6" },
+      { color: "#0FB77A" },
+      { color: "#FAB70A" },
+      { color: "#F09468" },
     ],
   };
 
   return (
-    <Chart
-      width={"500px"}
-      height={"300px"}
-      chartType="PieChart"
-      loader={<div>Loading Chart</div>}
-      data={[
-        ["Country", "Count"],
-        ...data.map(({ country, count }) => [country, count]),
-      ]}
-      options={options}
-    />
+    <div className="px-10 py-10 border-[#EFF1F6] border rounded-md border-slate-500">
+      <Chart
+        // width={"500px"}
+        // height={"300px"}
+        chartType="PieChart"
+        loader={<div>Loading Chart</div>}
+        data={[
+          ["Country", "Count"],
+          ...data.map(({ country, count }) => [country, count]),
+        ]}
+        options={options}
+      />
+    </div>
   );
 };
 
 export default PieChart;
+
