@@ -51,7 +51,7 @@ const Pie = () => {
         ]}
         options={options}
       />
-      <h5 className="text-[#FF5403] text-sm font-light">View full reports</h5>
+      {/* <h5 className="text-[#FF5403] text-sm font-light">View full reports</h5> */}
     </div>
   );
 };
